@@ -1,8 +1,20 @@
 import Image from 'next/image'
+import Logo from './components/Logo'
 
 export default function Home() {
   return (
-    <div className='mx-auto w-full sm:w-3/4 lg:w-1/3 border px-4 font-[family-name:var(--font-satoshi)]'>
+    <main className='mx-auto w-full sm:w-3/4 lg:w-1/3 border px-4 font-[family-name:var(--font-satoshi)]'>
+      <nav className='py-3 flex justify-center w-full'>
+        <Logo
+          config={{
+            text: 'rudr',
+            fontSize: 30,
+            strokeWidth: 0.8,
+            color: '#4f4f4f',
+            textAlign: 'center',
+          }}
+        />
+      </nav>
       <section className='py-20'>
         <div className='border w-[128px] h-[128px] border-[#bdbdbd] rounded-full p-1 border-dashed mb-8'>
           <Image src='/images/me.jpeg' alt='Rudra Bhikadiya' width={200} height={200} className='rounded-full ' />
@@ -14,6 +26,6 @@ export default function Home() {
           <div className='inline-block text-sm '>actively looking for new opportunities</div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }
